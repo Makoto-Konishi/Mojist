@@ -71,4 +71,5 @@
 
 [![Image from Gyazo](https://i.gyazo.com/aa5c5c2521a6d066a086781c024c8ac7.png)](https://gyazo.com/aa5c5c2521a6d066a086781c024c8ac7)
 
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FNSrQiw5Yugr3qCk8Bj5UkX%2FPF%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
+
+https://www.figma.com/file/NSrQiw5Yugr3qCk8Bj5UkX/PF?node-id=0%3A1
