@@ -1,11 +1,18 @@
-<%= form_with url: login_path, local:true do |f| %>
+<div class="has-text-centered">
+  <h1 class="title">ログイン</h1>
+  <%= form_with url: login_path, local:true do |f| %>
+    <div class="field">
+      <%= f.label :email, 'メールアドレス', class: 'label has-text-left'%>
+      <%= f.text_field :email, class: 'input'%>
+    </div>
+    <div class="field">
+      <%= f.label :password, 'パスワード', class: 'label has-text-left' %>
+      <%= f.password_field :password, class: 'input'%>
+    </div>
+    <%= link_to '新規登録はこちら', signup_path %>
+    <div class="control">
+      <%= f.submit 'ログイン', class: 'button is-info is-rounded is-medium mt-5' %>
+    </div>
+  <% end %>
+</div>
 
-  <%= f.label :email, "メールアドレス" %>
-  <%= f.text_field :email%>
-
-  <%= f.label :password, "パスワード" %>
-  <%= f.password_field :password%>
-
-  <%= f.submit "ログイン" %>
-<% end %>
-<%= link_to '新規登録はこちら', signup_path %>
