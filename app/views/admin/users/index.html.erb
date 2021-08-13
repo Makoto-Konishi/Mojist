@@ -1,0 +1,12 @@
+<h1>
+  ユーザー一覧
+</h1>
+
+<% @users.each do |user| %>
+  <ul>
+    <li>
+      <%= user.name %>
+    </li>
+  </ul>
+<% end %>
+<%= link_to 'ログアウト', logout_path, method: :delete, class: 'nav-link' %>

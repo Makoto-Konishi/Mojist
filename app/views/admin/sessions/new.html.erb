@@ -1,0 +1,17 @@
+<div class="has-text-centered">
+  <h1 class="title">管理者ログイン</h1>
+  <%= form_with url: admin_login_path, local:true do |f| %>
+    <div class="field">
+      <%= f.label :email, 'メールアドレス', class: 'label has-text-left'%>
+      <%= f.text_field :email, class: 'input'%>
+    </div>
+    <div class="field">
+      <%= f.label :password, 'パスワード', class: 'label has-text-left' %>
+      <%= f.password_field :password, class: 'input'%>
+    </div>
+    <div class="control">
+      <%= f.submit 'ログイン', class: 'button is-info is-rounded is-medium mt-5' %>
+    </div>
+  <% end %>
+</div>
+
