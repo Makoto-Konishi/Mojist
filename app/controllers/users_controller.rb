@@ -12,11 +12,15 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       auto_login(@user)
-      redirect_to root_url, notice: 'ユーザー登録に成功しました'
+      redirect_to user_url(@user), success: 'サインアップに成功しました'
     else
-      flash.now[:alert] = "ユーザー登録に失敗しました"
+      flash.now[:alert] = "サインアップに失敗しました"
       render :new
     end
+  end
+
+  def show
+    @user = User.find(params[:id])
   end
 
   private
