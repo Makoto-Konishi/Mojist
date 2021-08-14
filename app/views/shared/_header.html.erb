@@ -1,0 +1,12 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <%= link_to 'Mojist', root_path, class: 'title'%>
+  </div>
+  <div class="navbar-menu">
+    <% if current_user %>
+      <%= link_to 'ログアウト', logout_path, method: :delete, class: 'nav-link' %>
+    <% else %>
+      <%= link_to 'ログイン', login_path %>
+    <% end %>
+  </div>
+</nav>
