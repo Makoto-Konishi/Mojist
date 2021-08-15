@@ -23,17 +23,19 @@ class UsersController < ApplicationController
     # adminがtrue,もしくは自分のページでない場合,自分の詳細画面にリダイレクト
     @user = User.find(params[:id])
     unless current_user.admin || current_user.id == @user.id
-      redirect_to user_path(current_user.id)
+      redirect_to user_path(current_user.id), danger: '権限がありません'
     end
   end
 
   def edit
     @user = User.find(params[:id])
+    unless current_user.admin || current_user.id == @user.id
+      redirect_to user_path(current_user.id), danger: '権限がありません'
+    end
   end
 
   def update
     @user = User.find(params[:id])
-
     if @user.update(user_params)
       redirect_to user_url(@user), success: '更新に成功しました'
     else
