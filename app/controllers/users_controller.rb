@@ -20,7 +20,11 @@ class UsersController < ApplicationController
   end
 
   def show
+    # adminがtrue,もしくは自分のページでない場合,自分の詳細画面にリダイレクト
     @user = User.find(params[:id])
+    unless current_user.admin || current_user.id == @user.id
+      redirect_to user_path(current_user.id)
+    end
   end
 
   def edit
