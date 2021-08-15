@@ -36,12 +36,8 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
-    if @user.update(user_params)
-      redirect_to user_url(@user), success: '更新に成功しました'
-    else
-      flash.now[:alert] = '更新に失敗しました'
-      render :edit
-    end
+    @user.update!(user_params)
+    redirect_to user_url(@user), success: '更新に成功しました'
   end
   private
 
