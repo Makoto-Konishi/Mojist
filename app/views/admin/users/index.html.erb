@@ -1,22 +1,20 @@
-<div class="has-text-centered">
-  <h1 class="title">ユーザー一覧</h1>
+<h1 class="title has-text-centered">ユーザー一覧</h1>
 
-  <table class="table is-hoverable">
-    <thead>
+<table class="table" align="center">
+  <thead>
+  <tr>
+    <th>名前</th>
+    <th></th>
+    <th></th>
+  </tr>
+  </thead>
+  <% @users.each do |user| %>
+  <tbody>
     <tr>
-      <th>名前</th>
-      <th></th>
-      <th></th>
+      <td><%= link_to user.name, user_path(user) %></td>
+      <td><%= link_to '編集', edit_admin_user_path(user), class: 'button is-success' %></td>
+      <td><%= link_to '削除', admin_user_path(user), method: :delete, data: {confirm: 'ユーザーを削除しますか？'}, class: 'button is-danger' %></td>
     </tr>
-    </thead>
-    <% @users.each do |user| %>
-    <tbody>
-      <tr>
-        <td><%= link_to user.name, user_path(user) %></td>
-        <td><%= link_to '編集', edit_admin_user_path(user), class: 'button is-success' %></td>
-        <td><%= link_to '削除', admin_user_path(user), method: :delete, data: {confirm: 'ユーザーを削除しますか？'}, class: 'button is-danger' %></td>
-      </tr>
-    </tbody>
-    <% end %>
-  </table>
-</div>
+  </tbody>
+  <% end %>
+</table>
