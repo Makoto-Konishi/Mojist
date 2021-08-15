@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d14fc3c4-4a98-4b92-872e-eefa7236bd40" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/users/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/users/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/shared/_header.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/shared/_header.html.erb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,7 +158,7 @@
       <workItem from="1628517218223" duration="39333000" />
       <workItem from="1629046404897" duration="307000" />
       <workItem from="1629046827056" duration="698000" />
-      <workItem from="1629047881255" duration="4321000" />
+      <workItem from="1629047881255" duration="6862000" />
     </task>
     <servers />
   </component>

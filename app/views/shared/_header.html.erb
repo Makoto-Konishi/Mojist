@@ -3,10 +3,14 @@
     <%= link_to 'Mojist', root_path, class: 'title'%>
   </div>
   <div class="navbar-menu">
-    <% if current_user %>
-      <%= link_to 'ログアウト', logout_path, method: :delete%>
-    <% else %>
-      <%= link_to 'ログイン', login_path %>
-    <% end %>
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <% if current_user %>
+          <%= link_to 'ログアウト', logout_path, method: :delete, class: 'button is-danger' %>
+        <% else %>
+          <%= link_to 'ログイン', login_path, class: 'button is-primary' %>
+        <% end %>
+      </div>
+    </div>
   </div>
 </nav>
