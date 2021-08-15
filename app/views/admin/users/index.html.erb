@@ -1,12 +1,22 @@
-<h1>
-  ユーザー一覧
-</h1>
+<div class="has-text-centered">
+  <h1 class="title">ユーザー一覧</h1>
 
-<% @users.each do |user| %>
-  <ul>
-    <li>
-      <%= user.name %>
-    </li>
-  </ul>
-<% end %>
-<%= link_to 'ログアウト', logout_path, method: :delete, class: 'nav-link' %>
+  <table class="table is-hoverable">
+    <thead>
+    <tr>
+      <th>名前</th>
+      <th></th>
+      <th></th>
+    </tr>
+    </thead>
+    <% @users.each do |user| %>
+    <tbody>
+      <tr>
+        <td><%= link_to user.name, user_path(user) %></td>
+        <td><%= link_to '編集', edit_admin_user_path(user), class: 'button is-success' %></td>
+        <td><%= link_to '削除', admin_user_path(user), method: :delete, data: {confirm: 'ユーザーを削除しますか？'}, class: 'button is-danger' %></td>
+      </tr>
+    </tbody>
+    <% end %>
+  </table>
+</div>

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: 'home#index'
   get 'home/index'
-  resources :users, except: [:new]
+  resources :users, except: [:new, :destroy]
 
   get '/signup', to: 'users#new'
   get '/login', to: 'sessions#new'
@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   namespace :admin do
     get '/login', to: 'sessions#new'
     post '/login', to: 'sessions#create'
-    resources :users, except: [:new]
+    resources :users
   end
 
 end
