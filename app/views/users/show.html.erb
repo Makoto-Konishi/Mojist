@@ -2,4 +2,8 @@
   ユーザー詳細
 </h1>
 
-名前: <%= @user.name %>
+<div>
+  名前: <%= @user.name %>
+</div>
+
+<%= link_to '編集', edit_user_path, class: 'button is-success is-rounded is-medium mt-5' %>
